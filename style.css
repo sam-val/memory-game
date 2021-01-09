@@ -1,0 +1,18 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+
+.main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.grid {
+    display: grid;
+    grid-template: repeat(4, 150px) / repeat(4,150px);
+    gap: 5px;
+}
