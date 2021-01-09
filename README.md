@@ -1,1 +1,1 @@
-## memory card game in Javasript
+## memory game in Javascript
