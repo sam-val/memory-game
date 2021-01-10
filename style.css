@@ -7,12 +7,51 @@
     position: absolute;
     top: 50%;
     left: 50%;
-
     transform: translateX(-50%) translateY(-50%);
+    display: flex;
+    flex-direction: column;
+
 }
 
 .grid {
     display: grid;
     grid-template: repeat(4, 150px) / repeat(4,150px);
     gap: 5px;
+}
+
+.grid > img {
+    border-radius: 10px;
+}
+
+.info {
+    height: 80px;
+    font-size: 2em;
+    background-color: blue;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.try, .score {
+    width: 120px;
+    position: relative;
+    font-size: 2rem;
+}
+
+.try {
+    left: 10px;
+    text-align: right;
+}
+
+.score {
+    position: relative;
+    left: -15px;
+    font-weight: bolder;
+    text-align: center;
 }

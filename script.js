@@ -45,9 +45,11 @@ function occurances(item, list) {
 
 
 const grid = document.querySelector(".grid");
+var tries = 0;
 var pairs = [];
 var pairs_won = 0;
 var cards_array = []
+
 
 // create the board and randomize it as well:
 createBoard();
@@ -88,9 +90,15 @@ function flipCard() {
         pairs.push(this);
         if (pairs.length === 2 ) {
             checkMatch();
+            tries++;
+            display_score();
         }
     }
 
+}
+
+function display_score() {
+    document.querySelector(".score").innerHTML = tries.toString().padStart(3,"0");
 }
 
 
@@ -105,7 +113,7 @@ function checkMatch() {
             pairs.length = 0;
 
             if (pairs_won === cards.length) {
-                if (confirm("You won!. Play again?")) {
+                if (confirm("You won! Play again?")) {
                     reset_game(); 
                 }
             }
@@ -146,6 +154,8 @@ function reset_game() {
     cards_array = [];
     pairs = [];
     pairs_won = 0;
+    tries = 0;
+    display_score();
 
 
     // remove children of grid:
