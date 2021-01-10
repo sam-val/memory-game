@@ -1,6 +1,6 @@
 ## Memory game on the browser
 
-Technically I was just practing with JS.
+Technically I was just practising with JS.
 
 *Images created using [Autodraw][link].*
 
